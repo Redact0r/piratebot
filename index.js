@@ -56,7 +56,7 @@ bot.on("messageCreate", async (msg) => {
   let command;
   let users;
 
-  if (msg.content.includes("apple")) {
+  if (msg.content.toLowerCase().includes("apple")) {
     msg.react("🍏");
   }
 
@@ -69,6 +69,31 @@ bot.on("messageCreate", async (msg) => {
 
     msg.delete();
     return msg.channel.send(reply);
+  }
+
+  if (msg.content.toLowerCase().includes("marble1")) {
+    const emoji = utils.getMarbleEmojiFromColor("blue");
+    msg.react(emoji);
+  }
+
+  if (msg.content.toLowerCase().includes("marble2")) {
+    const emoji = utils.getMarbleEmojiFromColor("green");
+    msg.react(emoji);
+  }
+
+  if (msg.content.toLowerCase().includes("marble3")) {
+    const emoji = utils.getMarbleEmojiFromColor("orange");
+    msg.react(emoji);
+  }
+
+  if (msg.content.toLowerCase().includes("marble4")) {
+    const emoji = utils.getMarbleEmojiFromColor("red");
+    msg.react(emoji);
+  }
+
+  if (msg.content.toLowerCase().includes("marble5")) {
+    const emoji = utils.getMarbleEmojiFromColor("yellow");
+    msg.react(emoji);
   }
 
   if (msg.content.startsWith("!")) {
