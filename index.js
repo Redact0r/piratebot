@@ -68,7 +68,7 @@ bot.on("messageCreate", async (msg) => {
     );
 
     msg.delete();
-    msg.channel.send(reply);
+    return msg.channel.send(reply);
   }
 
   if (msg.content.startsWith("!")) {
