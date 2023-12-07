@@ -1,0 +1,18 @@
+{
+  "name": "Piratebot",
+  "version": "1.0.0",
+  "description": "For rackin' up your marbles!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tyler Sharp",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "knex": "^3.0.1",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.11.3"
+  }
+}
