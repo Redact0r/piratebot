@@ -24,15 +24,25 @@ const getMarbleEmojiFromColor = (color) => {
 
   const marble = marbleColors.find((marble) => marble.color == color);
   if (!marble) {
-    return console.error(
+    console.error(
       `ERROR: Color not found. Valid colors are ${possibleColors.join(", ")}`
     );
+    return "error";
   }
   return marble.emoji;
 };
+
+const getSelectMessagesFromChannel = (channel, searchWords) => {};
+
+const getScoreMessageFromUser = (game, user, searchWords) => {};
+
+const getAllMessagesByGameNum = (game, number) => {};
 
 module.exports = {
   checkForBannedWords,
   getRandomEntryFromArray,
   getMarbleEmojiFromColor,
+  getSelectMessagesFromChannel,
+  getScoreMessageFromUser,
+  getAllMessagesByGameNum,
 };

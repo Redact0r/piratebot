@@ -92,8 +92,8 @@ bot.on("messageCreate", async (msg) => {
   }
 
   if (msg.content.toLowerCase().includes("marble5")) {
-    const emoji = utils.getMarbleEmojiFromColor("yellow");
-    msg.react(emoji);
+    const emoji = utils.getMarbleEmojiFromColor("asdasdas");
+    msg.react(emoji).catch((error) => console.error(error));
   }
 
   if (msg.content.startsWith("!")) {
