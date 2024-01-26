@@ -6,12 +6,6 @@ const games = [
     scoringType: "guessingGame",
   },
   {
-    name: "Guess the Audio",
-    channelName: "guess-the-audio",
-    scoringCriteria: "lowest",
-    scoringType: "guessingGame",
-  },
-  {
     name: "Wordle",
     channelName: "wordle",
     scoringCriteria: "lowest",

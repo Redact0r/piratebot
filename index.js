@@ -24,6 +24,9 @@ bot.commands = new Collection();
 const botCommands = require("./commands/");
 const utils = require("./utils/utils.js");
 const sources = require("./sources/index.js");
+const gameChannelNames = ["guess-the-game", "wordle", "octordle"];
+const marbles = require("./components/Marbles.js");
+const Marbles = new marbles.Marbles();
 
 Object.keys(botCommands).map((key) => {
   bot.commands.set(botCommands[key].name, botCommands[key]);
@@ -69,6 +72,13 @@ bot.on("messageCreate", async (msg) => {
 
     msg.delete();
     return msg.channel.send(reply);
+  }
+
+  const channelName = msg.channel.name;
+  const isGameChannel = gameChannelNames.includes(channelName);
+
+  if (isGameChannel) {
+    Marbles.determineGameChannel(channelName, msg);
   }
 
   if (msg.content.toLowerCase().includes("marble1")) {
