@@ -95,14 +95,13 @@ class Marbles {
     const scoreObj = this.buildScoreObj(gameName, msg, score, gameNum);
     console.log(scoreObj);
   }
+
+  addMarbleEmoji(msgId) {}
+  removeMarbleEmoji(msgId) {}
+
+  determineWinner(arrayOfScoreObjs) {}
 }
 
 module.exports = {
   Marbles,
 };
-
-// determineWinner(gameType, scoresArr) {}
-// giveMarble(user, game, gameNumber) {}
-// takeMarble(user, game, gameNumber) {}
-// addMarbleEmoji(user, msg) {}
-// removeMarbleEmoji(user, msg) {}
